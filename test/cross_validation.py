@@ -18,7 +18,7 @@ def opposites(targets):
     return np.array(zip(opps, targets))
 
 # Importing the data
-docs = pd.read_csv('~/data/addm/corpus_with_lemmas_clean.csv').iloc[:, 1:]
+docs = pd.read_csv(CORPUS GOES HERE).iloc[:, 1:]
 targets = np.array(docs['aucaseyn'])
 
 # Converting phrases to BoF with TF-IDF normalization
