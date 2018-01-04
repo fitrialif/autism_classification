@@ -4,10 +4,9 @@ import tensorflow as tf
 import pandas as pd
 
 from sklearn.model_selection import train_test_split
-from sklearn.utils import shuffle
 from sklearn.model_selection import KFold
-from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer
-from document_classification.tools import diagnostics
+from sklearn.feature_extraction.text import CountVectorizer
+from models.tools import diagnostics
 from text_helpers import opposites, IndexBatchGenerator
 
 # Quick function for resetting the graph
@@ -110,4 +109,3 @@ for train, test in folds:
         test_stats = diagnostics(preds.eval(feed_dict=test_dict), y_test[:, 1])
         print test_stats
         predicted_probs[test, :] = probs.eval(test_dict)
-
