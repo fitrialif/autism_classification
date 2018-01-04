@@ -1,8 +1,7 @@
 '''A script for testing the accuracy of different classifiers'''
-from document_classification.tools import *
-from document_classification.lsa import decompose
-from document_classification.nbsvm import NBSVM, TextMNB
-from document_classification.ensemble import Ensemble
+from models.tools import *
+from models.lsa import decompose
+from models.nbsvm import NBSVM, TextMNB
 
 import numpy as np
 from sklearn.decomposition import LatentDirichletAllocation
@@ -101,4 +100,3 @@ for i, seed in enumerate(seeds):
 	svm_stats.ix[i] = model_diagnostics(svm, d.X_test, d.y_test).values
 	lda_stats.ix[i] = model_diagnostics(lda, dlda.X_test, dlda.y_test).values
 	lsa_stats.ix[i] = model_diagnostics(lsa, dlsa.X_test, dlsa.y_test).values
-
