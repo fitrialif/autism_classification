@@ -1,4 +1,4 @@
-"Scott's script for training a random forest docs" 
+"Script for training a random forest" 
 import pandas as pd
 import numpy as np
 import sklearn
