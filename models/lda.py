@@ -12,9 +12,9 @@ if __name__ == '__main__':
 	parser = argparse.ArgumentParser()
 	
 	#positional arguments
-	parser.add_argument('data', default='~/data/addm/corpus_with_lemmas.csv', help='path for the input data')
-	parser.add_argument('x_name', default='dx', help='name of the column holding the text')
-	parser.add_argument('y_name', default='aucaseyn', help='name of the column holding the target values')
+	parser.add_argument('data', help='path for the input data')
+	parser.add_argument('x_name', help='name of the column holding the text')
+	parser.add_argument('y_name', help='name of the column holding the target values')
 
 	#optional arguments for tuning
 	parser.add_argument('-lm', '--limit_features', type=bool, default=True, help='limit the number of features for the SVM? (yes or no)')
