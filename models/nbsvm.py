@@ -1,4 +1,4 @@
-'''Scott's script for training NB-SVMs a la Wang and Manning (2012)'''
+'''Script for training NB-SVMs a la Wang and Manning (2012)'''
 import argparse
 import pandas as pd
 import numpy as np
